@@ -68,6 +68,8 @@ body {
   font-weight: 700;
   gap: 12px;
   left: 80px;
+  text-align: left;
+  width: 400px;
 }
 
 .search {
@@ -83,7 +85,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 12px;
-  left: 450px;
+  left: 250px;
   width: 280px;
 }
 
@@ -118,15 +120,17 @@ input[type=text] {
 }
 
 .subtract {
-  left: 474px;
+  left: 274px;
 }
 
 .apple {
-  left: 500px;
+  left: 300px;
 }
 
 .contact-button {
-  left: 529px;
+  left: 329px;
+  max-width: 210px;
+  overflow: hidden;
 }
 
 .menu {
@@ -144,10 +148,24 @@ input[type=text] {
   cursor: pointer;
   font-size: 16px;
   font-weight: 500;
-  padding: 33px 0;
+  overflow: hidden;
+  padding: 0 8px;
+  /* padding: 33px 8px; */
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 86px;
 }
 
-.current {
+.current,
+.random-bottom-text {
   color: var(--peach);
 }
 
@@ -180,12 +198,16 @@ input[type=text] {
   color: var(--blue);
   font-size: 80px;
   font-weight: 700;
+  height: 212px;
   margin-bottom: 20px;
   margin-top: 8px;
+  overflow: hidden;
+  width: 540px;
 }
 
 .main-text {
   font-size: 22px;
+  height: 87px;
   margin: 0;
   width: 460px;
 }
@@ -199,6 +221,7 @@ input[type=text] {
   background-color: #FC5868;
   border-style: none;
   color: var(--white);
+  cursor: pointer;
   font-size: 20px;
   font-weight: 700;
   min-width: 210px;
@@ -229,8 +252,14 @@ input[type=text] {
           flex-direction: row;
   font-weight: 700;
   gap: 24px;
+  height: 42px;
   position: absolute;
+  overflow: hidden;
+  width: 170px;
   text-align: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .promo-container-1 {
@@ -305,6 +334,27 @@ input[type=text] {
   opacity: 0;
 }
 
+.circle-1,
+.circle-2,
+.circle-3,
+.circle-4 {
+  position: absolute;
+  left: 0;
+  top: 750px;
+}
+
+.circle-2 {
+  top: 740px;
+}
+
+.circle-3 {
+  top: 730px;
+}
+
+.circle-4 {
+  top: 720px;
+}
+
 .bottom-container {
   background-color: var(--blue);
   color: var(--white);
@@ -318,6 +368,7 @@ input[type=text] {
 
 .bottom-text {
   font-size: 20px;
+  height: 72px;
   padding: 80px 80px 0 80px;
   text-align: left;
 }
