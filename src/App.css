@@ -34,9 +34,16 @@ body {
 }
 
 .top-container {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: 70px;
   position: absolute;
   top: 55px;
@@ -46,12 +53,16 @@ body {
 .search,
 .link-logo,
 .contact-button {
-  position: relative;
   height: 70px;
+  position: relative;
 }
 
 .logo {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 24px;
   font-weight: 700;
@@ -60,11 +71,17 @@ body {
 }
 
 .search {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: var(--off-white);
   border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 12px;
   left: 450px;
   width: 280px;
@@ -86,11 +103,17 @@ input[type=text] {
 }
 
 .link-logo {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: var(--off-white);
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 70px;
 }
 
@@ -141,8 +164,8 @@ input[type=text] {
 
 .main-container {
   color: var(--gray);
-  position: absolute;
   left: 217px;
+  position: absolute;
   text-align: left;
   top: 210px;
   width: 800px;
@@ -187,15 +210,23 @@ input[type=text] {
 }
 
 .button:hover {
-  filter: brightness(120%);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
 }
 
 .promo-container-1,
 .promo-container-2 {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--blue);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   font-weight: 700;
   gap: 24px;
   position: absolute;
@@ -213,8 +244,13 @@ input[type=text] {
 }
 
 .promo-number-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .promo-number {
@@ -235,20 +271,21 @@ input[type=text] {
 }
 
 .reading-girl {
+  left: 520px;
   position: absolute;
   top: 354px;
   z-index: 30;
-  left: 520px;
 }
 
 .red-line {
+  height: 300.26px;
+  left: 694px;
   position: absolute;
   top: 343px;
-  z-index: 30;
-  left: 694px;
-  transform: rotate(-1deg);
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
   width: 338.7px;
-  height: 300.26px;
+  z-index: 30;
 }
 
 .plus-container {
@@ -259,9 +296,9 @@ input[type=text] {
 
 .plus {
   height: 12.41px;
-  width: 12.41px;
   margin-bottom: 16px;
   margin-right: 16px;
+  width: 12.41px;
 }
 
 .missing-plus {
