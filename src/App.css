@@ -1,0 +1,297 @@
+:root {
+  --background: #F9F9F9;
+  --blue: #14134F;
+  --dark-gray: #2D2D39;
+  --gray: #52555B;
+  --light-blue: #CFDCFB;
+  --off-white: #EDF2FE;
+  --orange: #FFB47C;
+  --peach: #FC5868;
+  --white: #fff;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: var(--blue);
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.container {
+  background-color: var(--background);
+  height: 1044px;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: calc(100vh - 1044px);
+  width: 1440px;
+}
+
+.top-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  position: absolute;
+  top: 55px;
+}
+
+.logo,
+.search,
+.link-logo,
+.contact-button {
+  position: relative;
+  height: 70px;
+}
+
+.logo {
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  font-weight: 700;
+  gap: 12px;
+  left: 80px;
+}
+
+.search {
+  align-items: center;
+  background-color: var(--off-white);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  left: 450px;
+  width: 280px;
+}
+
+.search input {
+  background-color: var(--off-white);
+  border-style: none;
+  width: 200px;
+}
+
+.search input:focus {
+  outline: none;
+}
+
+input[type=text] {
+	font-family: inherit;
+  font-size: 16px;
+}
+
+.link-logo {
+  align-items: center;
+  background-color: var(--off-white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 70px;
+}
+
+.subtract {
+  left: 474px;
+}
+
+.apple {
+  left: 500px;
+}
+
+.contact-button {
+  left: 529px;
+}
+
+.menu {
+  background-color: var(--off-white);
+  border-radius: 0 16px 16px 0;
+  color: var(--dark-gray);
+  height: 440px;
+  position: relative;
+  top: 224px;
+  width: 160px;
+}
+
+.menu-item {
+  color: var(--dark-gray);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 33px 0;
+}
+
+.current {
+  color: var(--peach);
+}
+
+.menu-item:hover {
+  color: var(--gray);
+}
+
+.menu-line {
+  background-color: var(--light-blue);
+  height: 1px;
+  margin: 0 auto;
+  width: 124px;
+}
+
+.main-container {
+  color: var(--gray);
+  position: absolute;
+  left: 217px;
+  text-align: left;
+  top: 210px;
+  width: 800px;
+}
+
+.tagline {
+  font-size: 18px;
+  margin: 0;
+}
+
+.header {
+  color: var(--blue);
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
+.main-text {
+  font-size: 22px;
+  margin: 0;
+  width: 460px;
+}
+
+.marked-date {
+  color: var(--peach);
+  font-weight: 700;
+}
+
+.button {
+  background-color: #FC5868;
+  border-style: none;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 700;
+  min-width: 210px;
+  height: 70px;
+}
+
+.explore-button {
+  margin-top: 50px;
+}
+
+.button:hover {
+  filter: brightness(120%);
+}
+
+.promo-container-1,
+.promo-container-2 {
+  align-items: center;
+  color: var(--blue);
+  display: flex;
+  flex-direction: row;
+  font-weight: 700;
+  gap: 24px;
+  position: absolute;
+  text-align: left;
+}
+
+.promo-container-1 {
+  left: 1012px;
+  top: 246px;
+}
+
+.promo-container-2 {
+  left: 1160px;
+  top: 316px;
+}
+
+.promo-number-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-number {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.promo-line-1,
+.promo-line-2 {
+  background-color: #FFB47C;
+  height: 3px;
+  width: 38px;
+}
+
+.promo-line-2 {
+  background-color: #14134F;
+}
+
+.reading-girl {
+  position: absolute;
+  top: 354px;
+  z-index: 30;
+  left: 520px;
+}
+
+.red-line {
+  position: absolute;
+  top: 343px;
+  z-index: 30;
+  left: 694px;
+  transform: rotate(-1deg);
+  width: 338.7px;
+  height: 300.26px;
+}
+
+.plus-container {
+  position: relative;
+  right: -307px;
+  top: -100px;
+}
+
+.plus {
+  height: 12.41px;
+  width: 12.41px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+}
+
+.missing-plus {
+  opacity: 0;
+}
+
+.bottom-container {
+  background-color: var(--blue);
+  color: var(--white);
+  height: 275px;
+  left: calc((1440px - 1280px) / 2);
+  position: absolute;
+  top: calc(1044px - 275px);
+  width: 1280px;
+  z-index: 20;
+}
+
+.bottom-text {
+  font-size: 20px;
+  padding: 80px 80px 0 80px;
+  text-align: left;
+}
+
+.scroll-container {
+  cursor: pointer;
+  font-size: 16px;
+  padding-top: 44px;
+  text-align: center;
+}
+
+.scroll-container:hover {
+  color: var(--peach);
+}
