@@ -147,10 +147,9 @@ input[type=text] {
   color: var(--dark-gray);
   cursor: pointer;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   overflow: hidden;
   padding: 0 8px;
-  /* padding: 33px 8px; */
   height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,13 +218,15 @@ input[type=text] {
 
 .button {
   background-color: #FC5868;
+  border: solid 10px var(--peach);
   border-style: none;
   color: var(--white);
   cursor: pointer;
   font-size: 20px;
   font-weight: 700;
-  min-width: 210px;
   height: 70px;
+  min-width: 210px;
+  overflow: hidden;
 }
 
 .explore-button {
@@ -235,6 +236,49 @@ input[type=text] {
 .button:hover {
   -webkit-filter: brightness(120%);
           filter: brightness(120%);
+}
+
+.pop-out {
+  -webkit-animation: pop-out 1.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+          animation: pop-out 1.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+@-webkit-keyframes pop-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pop-out {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  40% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  80% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .promo-container-1,
@@ -252,14 +296,13 @@ input[type=text] {
           flex-direction: row;
   font-weight: 700;
   gap: 24px;
-  height: 42px;
   position: absolute;
   overflow: hidden;
   width: 170px;
   text-align: left;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .promo-container-1 {

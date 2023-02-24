@@ -33,6 +33,13 @@ function App() {
   const [randomPromo1, setRandomPromo1] = useState('+10000 E-books')
   const [randomPromo2, setRandomPromo2] = useState('Lifetime acess')
  
+  const [showButton, setShowButton] = useState(false);
+  
+  useEffect(() => {
+    setShowButton(true)
+  }, [])
+  
+
   const apiFunction = async () => {
     const response = await fetch('https://en.wikipedia.org/w/api.php?action=query&list=random&format=json&origin=*&rnnamespace=0&rnlimit=15')
     const jsonData = await response.json()
@@ -46,8 +53,6 @@ function App() {
   const buttonClick = () => {
     apiFunction()
 
-    setBottomText1('You just changed a bunch of stuff on this site to random article titles from Wikipedia, like this one: ')
-    setBottomText2('. Press the "Explore More" button to keep changing them over and over again and enjoy the slow, strange but inevitable descent into madness. Have Fun!')
     setRandomLogo(data.query.random[0].title)
     setRandomHeader(data.query.random[1].title)
     setRandomMenu1(data.query.random[2].title)
@@ -62,6 +67,8 @@ function App() {
     setRandomPromo1(data.query.random[11].title)
     setRandomPromo2(data.query.random[12].title)
     setRandomBottomText(data.query.random[13].title)
+    setBottomText1('You just changed a bunch of stuff on this site to random article titles from Wikipedia, like this one: ')
+    setBottomText2('. Press the "Explore More" button to keep changing them over and over again and enjoy the slow, strange but inevitable descent into madness. Have Fun!')
   }
 
   return (
@@ -91,7 +98,7 @@ function App() {
             <div className='tagline'>{randomTagLine}</div>
             <h1 className='header'>{randomHeader}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
             <div className='main-text'>National Read a Book Day on <span className='marked-date'>{randomPeachWord}</span> calls all book lovers to indulge in their favorite hobby, guilt-free.</div>
-            <button className='button explore-button' onClick={buttonClick}>Explore More</button>
+            <button className={`button explore-button ${showButton ? 'pop-out' : ''}`} onClick={buttonClick}>Explore More</button>
           </div>
           
           <nav className='menu'>
