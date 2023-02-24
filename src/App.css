@@ -219,7 +219,6 @@ input[type=text] {
 .button {
   background-color: #FC5868;
   border: solid 10px var(--peach);
-  border-style: none;
   color: var(--white);
   cursor: pointer;
   font-size: 20px;
